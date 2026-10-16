@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GT | Technical Writing Portfolio</title>
+<meta name="description" content="Writing samples by GT, a technical writer with 12+ years of software engineering experience.">
+<style>
+:root{
+  --deep:#111a3b; --deep2:#1b2760; --sky:#9db8ff; --mint:#5eead4;
+  --bg:linear-gradient(180deg,#dfe7fa 0,#eef2fc 420px,#f5f8fd 100%); --paper:#e9eefb; --ink:#141b2e; --muted:#586177; --line:#d8deec; --link:#2b4fa3; --tile:#fff;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0c1228; --paper:#0c1228; --ink:#e9edf8; --muted:#a2acc6; --line:#243058; --link:#9db8ff; --tile:#141d42;}
+}
+*{box-sizing:border-box}
+html{font-size:18px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);background-color:var(--paper);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Charter,"Iowan Old Style",Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--link)}
+a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;color:#fff;
+  background:radial-gradient(1200px 600px at 85% 20%,var(--deep2),var(--deep) 60%)}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .in{position:relative;max-width:60rem;margin:0 auto;padding:2rem 1.5rem 2rem}
+.name{font-size:.9rem;letter-spacing:.02em;color:var(--sky);margin:0 0 .5rem;font-weight:600}
+.hero h1{font-size:clamp(1.6rem,4vw,2.1rem);font-weight:700;letter-spacing:-.01em;max-width:none;margin-bottom:.6rem}
+.hero p.lead{font-size:1rem;color:#cdd6f0;max-width:36rem;margin:0 0 1.1rem}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--sky),var(--mint));color:#0f1a3d;
+  font-weight:700;font-size:.9rem;text-decoration:none;padding:.5rem 1.1rem;border-radius:6px}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;color:#fff;border:1px solid #6676b3;margin-left:.6rem}
+.btn.ghost:hover{background:rgba(255,255,255,.08);filter:none}
+
+/* Content */
+main{max-width:60rem;margin:0 auto;padding:0 1.5rem 3rem}
+section{margin-top:4.5rem}
+h2{font-size:1.5rem;margin-bottom:.4rem}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:36rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.skills h3{font-size:1.05rem;margin-bottom:.4rem}
+.skills p{margin:0;color:var(--muted);font-size:.95rem}
+.skills div{border-top:3px solid var(--sky);padding-top:1rem}
+
+.samples{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+a.sample{display:flex;flex-direction:column;background:var(--tile);border:1px solid var(--line);
+  border-radius:10px;padding:1.2rem 1.3rem;color:inherit;text-decoration:none;position:relative;overflow:hidden;
+  transition:transform .2s,box-shadow .2s,border-color .2s}
+a.sample::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--sky),var(--mint))}
+a.sample:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(17,26,59,.15);border-color:var(--sky)}
+a.sample.feature{grid-column:1/-1}
+.tag{align-self:flex-start;font-size:.75rem;font-weight:600;color:var(--link);background:rgba(157,184,255,.25);
+  border-radius:99px;padding:.1rem .65rem;margin-bottom:.6rem}
+.sample h3{font-size:1.1rem;margin-bottom:.35rem}
+.sample p{margin:0;color:var(--muted);flex:1;font-size:.9rem;line-height:1.5}
+.sample .go{margin-top:.8rem;font-weight:700;font-size:.85rem;color:var(--link)}
+
+.contact a{margin-right:1.5rem;font-weight:600}
+footer{margin-top:3.5rem;color:var(--muted);font-size:.9rem}
+
+@media (max-width:42rem){
+  .samples{grid-template-columns:1fr}
+  .btn.ghost{margin:.7rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){
+  a.sample{transition:none}a.sample:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="bg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="url(#g)" stroke-width="2">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#9db8ff"/><stop offset="1" stop-color="#5eead4"/></linearGradient></defs>
+    <path d="M0 200 Q 300 80 600 200 T 1200 200" stroke-opacity=".22"/>
+    <path d="M0 200 Q 150 110 300 200 T 600 200 T 900 200 T 1200 200" stroke-opacity=".18" transform="translate(0 20)"/>
+    <path d="M0 200 Q 100 140 200 200 T 400 200 T 600 200 T 800 200 T 1000 200 T 1200 200" stroke-opacity=".14" transform="translate(0 -20)"/>
+  </svg>
+  <div class="in">
+    <p class="name">GT, technical writer</p>
+    <h1>Complex technology, clearly explained.</h1>
+    <p class="lead">I have 12+ years of software engineering behind me. Now I write documentation for developers and for telecom and radio technology.</p>
+    <a class="btn" href="#samples">Read my samples</a><a class="btn ghost" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>What I bring</h2>
+    <p class="sub">Engineering experience, applied to clear, developer-focused documentation.</p>
+    <div class="skills">
+      <div><h3>Engineering background</h3><p>A decade as a mobile developer and tech lead, then web frontend work, so I can read code and talk to engineers as a peer.</p></div>
+      <div><h3>Telecom and radio</h3><p>I document radio technology, including 5G concepts, for readers who need to act on the information.</p></div>
+      <div><h3>Docs for developers</h3><p>READMEs, setup guides, and API reference documentation that people can follow without help.</p></div>
+    </div>
+  </section>
+
+  <section id="samples">
+    <h2>Writing samples</h2>
+    <p class="sub">Three samples, each written for a specific reader.</p>
+    <div class="samples">
+      <!-- Replace each href="#" with your link. Copy a whole <a class="sample"> block to add more. -->
+      <a class="sample feature" href="#">
+        <span class="tag">API documentation</span>
+        <h3>Swagger API documentation</h3>
+        <p>Interactive reference for a REST API, with endpoints, parameters, request and response examples, and error codes.</p>
+        <span class="go">Open the API docs</span>
+      </a>
+      <a class="sample" href="#">
+        <span class="tag">Concept guide</span>
+        <h3>5G carrier aggregation explained</h3>
+        <p>How primary and secondary cells work together to increase throughput, written for engineers new to the topic.</p>
+        <span class="go">Read the guide</span>
+      </a>
+      <a class="sample" href="#">
+        <span class="tag">Developer documentation</span>
+        <h3>Local document Q&amp;A tool: README and setup guide</h3>
+        <p>How to install, configure, and run an offline question-answering tool for confidential documents.</p>
+        <span class="go">Read the README</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p class="sub">Open to technical writing roles that combine engineering depth with documentation.</p>
+    <a href="mailto:you@example.com">Email</a>
+    <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+    <a href="https://github.com/your-username">GitHub</a>
+  </section>
+
+  <footer>All samples are based on public information or fictional examples.</footer>
+</main>
+
+</body>
+</html>
